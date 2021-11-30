@@ -1,5 +1,6 @@
 # SubQuery - Starter Package
 
+This is a demo project built for SubQuery Spartan program
 
 The Starter Package is an example that you can use as a starting point for developing your SubQuery project.
 A SubQuery package defines which data The SubQuery will index from the Substrate blockchain, and how it will store it. 
@@ -89,14 +90,12 @@ For the `subql-starter` project, you can try to query with the following code to
 
 ````graphql
 {
-  query{
-    starterEntities(first:10){
-      nodes{
-        field1,
-        field2,
-        field3
+   query{
+      starterEntities(last:10, orderBy: ID_ASC){
+         nodes{
+            blockHeight
+         }
       }
-    }
-  }
+   }
 }
 ````
